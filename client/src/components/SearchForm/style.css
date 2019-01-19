@@ -1,0 +1,37 @@
+form.search {
+  overflow: auto;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+label {
+  display: block;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form-control {
+  float: left;
+  display: block;
+  margin-bottom: 20px;
+}
+
+form.search button[type="submit"] {
+  float: right;
+  margin-top: 20px;
+}
+
+#search {
+  line-height: 25px;
+  margin-bottom: 15px;
+  width: 95%;
+}
+
+button {
+  height: 30px;
+  width: 70px;
+  background-color: #8df;
+  font-weight: bold;
+  position: relative;
+  margin-top: 15px;
+}
