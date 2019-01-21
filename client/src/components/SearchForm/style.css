@@ -25,13 +25,30 @@ form.search button[type="submit"] {
   line-height: 25px;
   margin-bottom: 15px;
   width: 95%;
+
 }
 
 button {
-  height: 30px;
+  height: 40px;
   width: 70px;
   background-color: #8df;
   font-weight: bold;
-  position: relative;
-  margin-top: 15px;
+  float: right;
+  margin-right: 100px;
 }
+
+hr {
+  width: 80%;
+  margin-top: 100px;
+  position: center;
+  margin-bottom: 25px;
+
+}
+
+#search-results-subheader {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+

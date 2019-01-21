@@ -1,3 +1,92 @@
-ul.search-results img {
+/* ul.search-results {
   margin: 0 auto;
+} */
+
+/* ul li p {
+list-style: none;
+} */
+
+/* ul {
+position: relative;
+margin: 12px solid black;
+} */
+
+/* li {
+position: relative;
+} */
+
+#image-left {
+  float: left;
+  /* background-color: red; */
 }
+
+#text-block {
+  display: block;
+  /* background-color: yellow; */
+  float: left;
+  position: absolute;
+  margin-left: 150px;
+  margin-right: 15px;
+}
+
+#title {
+  font-weight: bold;
+  display: block;
+}
+
+#description {
+  font-size: 14px;
+}
+
+#info-link {
+  font-size: 14px;
+  float: left;
+  display: block;
+  margin-right: 50px;
+}
+
+#authors {
+  font-size: 12px;
+}
+
+
+.list-group-item {
+  border: 6px solid white;
+  height: 100%;
+  width: 95%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  position: relative;
+  display: block; /* this removed the black dot */
+  margin-top: 20px;
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.button-view {
+  background-color: green;
+  border-radius: 5px;
+  color: white;
+  padding: .5em;
+  text-decoration: none;
+  float: left;
+  display: block;
+}
+
+.button-save {
+  background-color: Crimson;
+  border-radius: 5px;
+  color: white;
+  padding: .5em;
+  text-decoration: none;
+  float: left;
+  display: block;
+}
+
+/* .button:focus,
+.button:hover {
+  background-color: FireBrick;
+  color: white;
+} */
+
+

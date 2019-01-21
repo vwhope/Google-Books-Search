@@ -3,10 +3,19 @@ import "./style.css";
 
 function Footer() {
   return (
+    <div className="sticky"></div>,
     <footer className="footer">
       <span>Google Books Search</span>
     </footer>
   );
 }
+
+// function Footer() {
+//   return (
+//     <footer className="footer">
+//       <span>Google Books Search</span>
+//     </footer>
+//   );
+// }
 
 export default Footer;

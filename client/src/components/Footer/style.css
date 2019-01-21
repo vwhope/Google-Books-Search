@@ -1,11 +1,10 @@
-.footer {
-    min-height: 35px;
-    background: #E5E5E5;
-    position: relative;
+  /* this keeps horizontal scroll bar from showing */
+  body {
+    overflow-x: hidden;
   }
 
   .footer span {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
@@ -14,4 +13,11 @@
     text-align: center;
     color: white;
     border-top: 2px solid #0bf;
+  }
+
+  .sticky {
+    display: block;
+    padding: 20px;
+    height: 60px;
+    width: 100%;
   }

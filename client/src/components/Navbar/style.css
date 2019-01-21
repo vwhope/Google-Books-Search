@@ -6,7 +6,7 @@ nav.navbar.navbar-default {
   width: 100%;
   line-height: 40px;
   float: left;
-  margin: 0 0 3em 0;
+  margin: 0 0 48px 0;
   padding: 10px;
   list-style: none;
   background-color: black;
@@ -34,3 +34,4 @@ ul li {
 .navbar-brand {
   text-decoration: none;
 }
+

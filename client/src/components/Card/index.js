@@ -12,12 +12,12 @@ function Card(props) {
     >
 
       <CardBtn
-        // style={{ opacity: props.image ? 1 : 0 }}
+        style={{ opacity: props.image ? 1 : 0 }}
         onClick={props.handleBtnClick}
         data-value="View"
       />
       <CardBtn
-        // style={{ opacity: props.image ? 1 : 0 }}
+        style={{ opacity: props.image ? 1 : 0 }}
         onClick={props.handleBtnClick}
         data-value="Delete"
       />

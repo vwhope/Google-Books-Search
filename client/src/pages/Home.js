@@ -7,7 +7,8 @@ import Header from "../components/Header";
 function Home() {
   return (
     <div>
-      <Container style={{ marginTop: 30, marginLeft: 50}}>
+      <Container fluid>
+      {/* <Container style={{ marginTop: 0, marginLeft: 50}}> */}
         <Row>
           <Col size="md-12">
             <Header />

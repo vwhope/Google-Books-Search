@@ -6,8 +6,8 @@ import "./style.css";
 
 function Header() {
   return (
-    <div>
-      <Container style={{ marginTop: 30, marginLeft: 50}}>
+    <div id="header-container">
+      <Container style={{ marginLeft: 50}}>
         <Row>
           <Col size="md-12">
             <h1>(React) Google Books Search</h1>
