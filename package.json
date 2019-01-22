@@ -4,6 +4,7 @@
   "description": "SPA using React, MongoDB, Express",
   "main": "server.js",
   "scripts": {
+    "debug": "nodemon --inspect=9229 server.js",
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",

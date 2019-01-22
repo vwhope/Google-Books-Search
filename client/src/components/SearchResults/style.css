@@ -43,6 +43,11 @@ position: relative;
   float: left;
   display: block;
   margin-right: 50px;
+  cursor: pointer;
+}
+
+.button-save {
+  cursor: pointer;
 }
 
 #authors {

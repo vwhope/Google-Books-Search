@@ -20,9 +20,7 @@ class Search extends Component {
 
   // When the component mounts, get a list of all "The Stand" books and update this.state.books
   componentDidMount() {
-    // API.search()
-    //   .then(res => this.setState({ books: res.data.message }))
-    //   .catch(err => console.log(err));
+
   }
 
   handleInputChange = event => {
@@ -57,40 +55,34 @@ class Search extends Component {
       })
       .catch(err => this.setState({ error: err.message }));
   };
-
 ////
-
 handleViewBook = event => {
-  event.preventDefault();
+  // event.preventDefault();
   console.log("this is handleViewBook")
 };
 
 handleSaveBook = event => {
-  event.preventDefault();
-  console.log("this is handleSaveBook");
-  // ??? I need to toggle Save/Delete buttons but do I do it here?
-  console.log(this.state.title); // is undefined - why???
-  console.log(this.state.authors); // is undefined - why???
-    if (this.state.title && this.state.description) {
-      API.saveBook({
-        title: this.state.title,
-        authors: this.state.authors,
-        description: this.state.description
-      })
+  const bookToSave = this.state.results.find(book =>
+    book.id === event.target.id
+  )
+    console.log(bookToSave);
+
+        API.saveBook({ bookToSave,
+        title: bookToSave.title,
+        authors: bookToSave.authors,
+        description: bookToSave.description
+        })
         .then(res => this.loadBooks())
         .catch(err => console.log(err));
-    }
+
   };
-
-
-
 ///
 
   render() {
     return (
       <div>
-        <Container fluid>
-        {/* <Container style={{ minHeight: "100%", marginLeft: 50 }}> */}
+        {/* <Container > */}
+        <Container style={{ minHeight: "100%", marginLeft: 50 }}>
           <Row>
             <Col size="md-12">
               <Header />
@@ -111,6 +103,7 @@ handleSaveBook = event => {
           <SearchResults
             handleViewBook={this.handleViewBook}
             handleSaveBook={this.handleSaveBook}
+            // books={this.state.books}
             results={this.state.results}
           />
         </Container>

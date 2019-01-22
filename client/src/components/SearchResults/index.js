@@ -23,11 +23,11 @@ function SearchResults(props) {
             <p id="title">{result.title}</p>
             <p id="authors">Written By: {result.authors}</p>
             <p id="description">{result.description}</p>
-            <a id="info-link" href={result.link} target="blank">View</a>
+            <a href={result.link} target="blank">
             <button type="button" id="info-link" onClick={props.handleViewBook} className="button-view">
             View
-            </button>
-            <button type="button" id="save-to-db" onClick={props.handleSaveBook} className="button-save">
+            </button></a>
+            <button type="button" id={result.id} onClick={props.handleSaveBook} className="button-save">
             Save
             </button>
           </div>

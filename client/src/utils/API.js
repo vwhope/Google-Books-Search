@@ -3,20 +3,21 @@ import axios from "axios";
 const BASEURL = "https://www.googleapis.com/books/v1/volumes?q=";
 
 export default {
-  // Query using googlebooks api
+
+   // Get all books that meet Query Search criteria using googlebooks api
   search: function(query) {
     return axios.get(BASEURL + query);
   },
-   // Gets all books
-   getBooks: function() {
-    // return axios.get("/api/saved");
-    return axios.get("/api/");
+  // Get ALL books in googlebooks DB (collection books)
+  getBooks: function() {
+  // return axios.get("/api/saved"); // tried /books /api/books
+    return axios.get("/api/books");
   },
-  // Gets the book with the given id
+  // Get A book by ID
   getBook: function(id) {
     return axios.get("/api/books/" + id);
   },
-  // Deletes the book with the given id
+  // Delete book by ID
   deleteBook: function(id) {
     return axios.delete("/api/books/" + id);
   },
@@ -24,14 +25,5 @@ export default {
   saveBook: function(bookData) {
     return axios.post("/api/books", bookData);
   }
-
-
-
-
-
-
-
-
-
 
 };

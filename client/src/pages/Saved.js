@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import { List, ListItem } from "../components/List";
 
 
-class  Saved extends Component {
+class Saved extends Component {
   state = {
     books: [],
     title: "",
@@ -42,40 +42,45 @@ class  Saved extends Component {
     });
   };
 
+
+
   render() {
     return (
-      <Container fluid>
-        <Row>
-          <Col size="md-12">
-            <Header />
-          </Col>
-        </Row>
-        <Row>
-          <Col size="md-12">
-              <h3>My Saved Books</h3>
-          </Col>
-        </Row>
-        <Row>
-          <Col size="md-12">
-            {this.state.books.length ? (
-              <List>
-                {this.state.books.map(book => (
-                  <ListItem key={book._id}>
-                    <Link to={"/books/" + book._id}>
-                      <strong>
-                        {book.title} by {book.authors}
-                      </strong>
-                    </Link>
-                    <DeleteBtn onClick={() => this.deleteBook(book._id)} />
-                  </ListItem>
-                ))}
-              </List>
-            ) : (
-              <h3>No Results to Display</h3>
-            )}
-          </Col>
-        </Row>
-      </Container>
+      <div>
+        <Container style={{ minHeight: "100%", marginLeft: 50 }}>
+          <Row>
+            <Col size="md-12">
+              <Header />
+            </Col>
+          </Row>
+          <Row>
+            <Col size="md-12">
+                <h3>My Saved Books</h3>
+            </Col>
+          </Row>
+          <Row>
+            <Col size="md-12">
+            <h3>{this.state.books.length}</h3>
+              {this.state.books.length ? (
+                <List>
+                  {this.state.books.map(book => (
+                    <ListItem key={book._id}>
+                      <Link to={"/books/" + book._id}>
+                        <strong>
+                          {book.title} by {book.authors}
+                        </strong>
+                      </Link>
+                      <DeleteBtn onClick={() => this.deleteBook(book._id)} />
+                    </ListItem>
+                  ))}
+                </List>
+              ) : (
+                <h3>No Results to Display</h3>
+              )}
+            </Col>
+          </Row>
+        </Container>
+      </div>
     );
   }
 }

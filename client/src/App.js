@@ -16,6 +16,8 @@ function App() {
         <Wrapper>
           <Route exact path="/" component={Home} />
           <Route exact path="/search" component={Search} />
+          <Route exact path="/books" component={Search} />
+          <Route exact path="/saved" component={Saved} />
           <Route exact path="/books" component={Saved} />
         </Wrapper>
         <Footer />
