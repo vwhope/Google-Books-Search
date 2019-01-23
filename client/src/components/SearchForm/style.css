@@ -4,7 +4,6 @@ form.search {
   width: 100%;
 }
 
-
 label {
   display: block;
   position: relative;
@@ -26,16 +25,21 @@ form.search button[type="submit"] {
   line-height: 25px;
   margin-bottom: 15px;
   width: 95%;
-
 }
 
-button {
-  height: 40px;
-  width: 70px;
+button, #search-button {
   background-color: #8df;
   font-weight: bold;
-  float: right;
+}
+
+#search-button {
   margin-right: 100px;
+  float: right;
+  display: block;
+  border-radius: 5px;
+  padding: .7em;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 hr {
@@ -43,7 +47,6 @@ hr {
   margin-top: 100px;
   position: center;
   margin-bottom: 25px;
-
 }
 
 #search-results-subheader {

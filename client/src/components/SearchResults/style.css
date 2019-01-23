@@ -1,59 +1,39 @@
-/* ul.search-results {
-  margin: 0 auto;
-} */
 
-/* ul li p {
-list-style: none;
-} */
+#title {
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 25px;
+}
 
-/* ul {
-position: relative;
-margin: 12px solid black;
-} */
-
-/* li {
-position: relative;
-} */
+#authors {
+  font-size: 12px;
+  margin-left: 25px;
+  margin-top: 0px;
+}
 
 #image-left {
   float: left;
-  /* background-color: red; */
+  clear: right;
+  margin-left: 25px;
+  margin-bottom: 15px;
 }
 
 #text-block {
   display: block;
-  /* background-color: yellow; */
   float: left;
   position: absolute;
-  margin-left: 150px;
-  margin-right: 15px;
-}
-
-#title {
-  font-weight: bold;
-  display: block;
+  margin-left: 175px;
+  margin-right: 25px;
+  /* max-height: 545px; */
+  /* border: 1px #DDDDDD solid;
+  border-radius: 4px; */
+  /* overflow-y: scroll;
+  overflow-x: hidden; */
 }
 
 #description {
   font-size: 14px;
 }
-
-#info-link {
-  font-size: 14px;
-  float: left;
-  display: block;
-  margin-right: 50px;
-  cursor: pointer;
-}
-
-.button-save {
-  cursor: pointer;
-}
-
-#authors {
-  font-size: 12px;
-}
-
 
 .list-group-item {
   border: 6px solid white;
@@ -62,36 +42,46 @@ position: relative;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   position: relative;
   display: block; /* this removed the black dot */
-  margin-top: 20px;
+  margin-top: 20px; /* space between books */
   white-space: wrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  /* margin-bottom: 50px; */
 }
 
+.list-group-item:last-child {
+margin-bottom: 75px;
+}
+
+.button-div {
+  float: right;
+  clear: right;
+  margin-right: 25px;
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
 .button-view {
   background-color: green;
   border-radius: 5px;
   color: white;
-  padding: .5em;
+  padding: .7em;
   text-decoration: none;
-  float: left;
-  display: block;
+  display: inline-block;
+  margin-right: 15px;
+  cursor: pointer;
+  /* font-size: 14px; */
 }
 
 .button-save {
   background-color: Crimson;
   border-radius: 5px;
   color: white;
-  padding: .5em;
+  padding: .7em;
   text-decoration: none;
-  float: left;
-  display: block;
+  display: inline-block;
+  cursor: pointer;
 }
 
-/* .button:focus,
-.button:hover {
-  background-color: FireBrick;
-  color: white;
-} */
+
 
 

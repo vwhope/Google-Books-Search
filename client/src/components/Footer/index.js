@@ -10,12 +10,4 @@ function Footer() {
   );
 }
 
-// function Footer() {
-//   return (
-//     <footer className="footer">
-//       <span>Google Books Search</span>
-//     </footer>
-//   );
-// }
-
 export default Footer;

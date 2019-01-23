@@ -1,23 +1,23 @@
-  /* this keeps horizontal scroll bar from showing */
-  body {
-    overflow-x: hidden;
-  }
+/* this keeps horizontal scroll bar from showing */
+body {
+  overflow-x: hidden;
+}
 
-  .footer span {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 3px;
-    background: black;
-    text-align: center;
-    color: white;
-    border-top: 2px solid #0bf;
-  }
+.footer span {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 13px;
+  background: black;
+  text-align: center;
+  color: white;
+  border-top: 2px solid #0bf;
+}
 
-  .sticky {
-    display: block;
-    padding: 20px;
-    height: 60px;
-    width: 100%;
-  }
+.sticky {
+  display: block;
+  padding: 20px;
+  height: 60px;
+  width: 100%;
+}

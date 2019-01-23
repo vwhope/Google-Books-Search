@@ -1,5 +1,5 @@
 import axios from "axios";
-
+// Google Books public search url - no key required
 const BASEURL = "https://www.googleapis.com/books/v1/volumes?q=";
 
 export default {

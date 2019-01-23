@@ -14,28 +14,32 @@ function SearchResults(props) {
       {props.results.map(result => (
         // console.log(result);
         <li key={result.id} className="list-group-item">
+          <div className="button-div">
+            <a href={result.link} target="blank">
+              <button type="button" id="info-link" onClick={props.handleViewBook} className="button-view">
+              View
+              </button>
+            </a>
+            <button type="button" id={result.id} onClick={props.handleSaveBook} className="button-save">
+            Save
+            </button>
+          </div>
+
+          <p id="title">{result.title}</p>
+          <p id="authors">Written By: {result.authors}</p>
 
           <div id="image-left">
             <img alt="BookImage" src={result.image} className="img-fluid" />
           </div>
 
           <div id="text-block">
-            <p id="title">{result.title}</p>
-            <p id="authors">Written By: {result.authors}</p>
             <p id="description">{result.description}</p>
-            <a href={result.link} target="blank">
-            <button type="button" id="info-link" onClick={props.handleViewBook} className="button-view">
-            View
-            </button></a>
-            <button type="button" id={result.id} onClick={props.handleSaveBook} className="button-save">
-            Save
-            </button>
           </div>
-
         </li>
+
       ))}
     </ul>
   );
 }
 
-export default SearchResults;
+    export default SearchResults;

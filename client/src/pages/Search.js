@@ -15,7 +15,12 @@ class Search extends Component {
     books: [],
     results: [],
     error: "",
-    deleted: false
+    deleted: false,
+    title: "",
+    authors: [],
+    description: "",
+    image: "",
+    link: "",
   };
 
   // When the component mounts, get a list of all "The Stand" books and update this.state.books
@@ -55,33 +60,28 @@ class Search extends Component {
       })
       .catch(err => this.setState({ error: err.message }));
   };
-////
-handleViewBook = event => {
-  // event.preventDefault();
-  console.log("this is handleViewBook")
-};
 
 handleSaveBook = event => {
   const bookToSave = this.state.results.find(book =>
     book.id === event.target.id
   )
-    console.log(bookToSave);
+    console.log(bookToSave.title);
+    console.log(bookToSave.authors);
 
-        API.saveBook({ bookToSave,
-        title: bookToSave.title,
-        authors: bookToSave.authors,
-        description: bookToSave.description
+        API.saveBook({
+          title: bookToSave.title,
+          authors: bookToSave.authors,
+          image: bookToSave.image,
+          description: bookToSave.description,
+          link: bookToSave.link
         })
         .then(res => this.loadBooks())
         .catch(err => console.log(err));
-
   };
-///
 
   render() {
     return (
       <div>
-        {/* <Container > */}
         <Container style={{ minHeight: "100%", marginLeft: 50 }}>
           <Row>
             <Col size="md-12">
@@ -101,9 +101,7 @@ handleSaveBook = event => {
             books={this.state.books}
           />
           <SearchResults
-            handleViewBook={this.handleViewBook}
             handleSaveBook={this.handleSaveBook}
-            // books={this.state.books}
             results={this.state.results}
           />
         </Container>
