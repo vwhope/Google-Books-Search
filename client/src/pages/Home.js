@@ -5,6 +5,7 @@ import Col from "../components/Col";
 import Header from "../components/Header";
 import homePhoto from "../library.jpg";
 
+
 const imageStyle = {
   position: 'center',
   textAlign:'center',
